@@ -1,0 +1,26 @@
+.navbar{
+    min-height: 80px;
+}
+.nav-personalize {
+    color:white;
+}
+
+.nav-personalize:hover {
+    color: lightgray;
+}
+
+.nav-personalize:visited{
+    color:white;
+}
+
+.fondomovil{
+    background-image: url("../img/ginbe.png");
+    background-attachment: fixed; /*Sirve para fijar el fondo*/
+    height: 450px;
+}
+
+
+.style-footer{
+    min-height: 200px;
+    color: white;
+}

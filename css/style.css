@@ -1,0 +1,39 @@
+.navbar{
+    min-height: 62px;
+    margin-bottom: 0;
+}
+nav.navbar.navbar-dark.bg-dark.sticky-top.navbar-expand-lg {
+    margin-bottom: 0 !important;
+}
+.nav-personalize {
+    color:white;
+}
+
+.nav-personalize:hover {
+    color: lightgray;
+}
+
+.nav-personalize:visited{
+    color:white;
+}
+
+.fondomovil{
+    background-image: url("img/store/bg-2.png");
+    background-attachment: fixed; /*Sirve para fijar el fondo*/
+    height: 310px;
+}
+
+
+section.c1,.row.c1  {
+    background: #00394f;
+}
+h2.titulos-1 {
+    color: #e2d073;
+    letter-spacing: 13px;
+    font-weight: 200;
+    margin: 20px 5px;
+}
+p.texto-1 {
+    color: #fff;
+    font-weight: 700;
+}
