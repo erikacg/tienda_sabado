@@ -1,34 +1,85 @@
 //arreglo de objetos
 
 let productos=[
-    {nombre:"producto1",precio:40000, photo:"img/p-img1.jpg",descripcion:"asasdas"},
-    {nombre:"producto2",precio:80000, photo:"img/p-img2.jpg",descripcion:"asasdas"},
-    {nombre:"producto3",precio:20000, photo:"img/p-img3.jpg",descripcion:"asasdas"},
-    {nombre:"producto5",precio:100000, photo:"img/p-img4.jpg",descripcion:"asasdas"},
-    {nombre:"producto6",precio:74000, photo:"img/p-img5.jpg",descripcion:"asasdas"},
-    {nombre:"producto7",precio:40000, photo:"img/p-img6.jpg",descripcion:"asasdas"},
-    {nombre:"producto8",precio:40000, photo:"img/p-img7.jpg",descripcion:"asasdas"},
-    {nombre:"producto9",precio:40000, photo:"img/p-img8.jpg",descripcion:"asasdas"},
-    {nombre:"producto10",precio:40000, photo:"img/p-img9.jpg",descripcion:"asasdas"},
-    {nombre:"producto4",precio:190000, photo:"img/p-img10.jpg",descripcion:"asasdas"}
+    {nombre:"Pin Haku -Viaje de chihiro",precio:27000,
+     photo:"img/p-img1.jpg",
+     descripcion:"Pin kawaii",
+     secondescripcion:"¡Agregue una dosis de kawaii a su vida cotidiana con estos llaveros súper lindos de Studio Ghibli! Estas baratijas son perfectas para mostrar tu amor por tus personajes favoritos de Ghibli."},
+
+    {nombre:"Ecobolsa mi vecino Totoro",
+    precio:53000,
+    photo:"img/p-img2.jpg",
+    descripcion:"lindo y ecologico",
+    secondescripcion:"Bolsa de algodón de tela ligera de 5 onzas bolsa reutilizable de tela para compras de comestibles, diseños creativos"},
+
+    {nombre:"Campanilla de viento Totoro",
+    precio:81000,
+    photo:"img/p-img3.jpg",
+    descripcion:"Tamaño: 18cm",
+    secondescripcion:"¡Excelente para usar como campanilla de viento, colgador de puerta, decoración de ventana, colgador de espejo retrovisor en su automóvil, o incluso excelente como adorno para el árbol de Navidad! \n\nMaterial: Resina"},
+
+    {nombre:"Posters películas 8' x 10'",
+    precio:25000, 
+    photo:"img/p-img4.jpg",
+    descripcion:"Material: propalcote",
+    secondescripcion:"Tamaño:  42x30 cm (16x12 pulgadas)"},
+
+    {nombre:"Camiseta Haku",
+    precio:96000, 
+    photo:"img/p-img5.jpg",
+    descripcion:"5.3 onzas, 100 % algodón ",
+    secondescripcion:"(99/1 algodón/poliéster (ceniza) y 90/10 algodón/poliéster (gris deportivo) \n\nCamiseta clásica unisex de peso pesado \nCuello y hombros sellados; etiqueta desprendible \nTipo de decoración: Impresión digital"},
+
+    {nombre:"Camiseta Viaje de chihiro",
+    precio:91000, 
+    photo:"img/p-img6.jpg",
+    descripcion:"100 % algodón ",
+    secondescripcion:"(99/1 algodón/poliéster (ceniza) y 90/10 algodón/poliéster (gris deportivo) \n\nCamiseta clásica unisex de peso pesado \nCuello y hombros sellados; etiqueta desprendible \nTipo de decoración: Impresión digital"},
+
+    {nombre:"Colgante Kaonashi- sin cara ",
+    precio:40000, 
+    photo:"img/p-img7.jpg",
+    descripcion:"Tamaño: 18 cm, 15 cm",
+    secondescripcion:"Material: Resina \n\n\nAdvertencia: Mantener alejado del fuego"},
+    
+    {nombre:"Kaonashi varios -sin cara",
+    precio:33000, 
+    photo:"img/p-img8.jpg",
+    descripcion:"Familia kaonashi...",
+    secondescripcion:"Escala: 1/60 \n\n\nMaterial: PVC \n\n\nTamaño: 3-6cm"},
+
+    {nombre:"Portalapices Totoro",
+    precio:45000, 
+    photo:"img/p-img9.jpg",
+    descripcion:"para adultos independientes",
+    secondescripcion:"soy un adulto independiente con gustos bien demenstes.... oyoyo de adulto independiente"},
+
+    {nombre:"Lampara Kaonashi - sin cara",
+    precio:190000, 
+    photo:"img/p-img10.jpg",
+    descripcion:"Figuras Juguete Luz LED",
+    secondescripcion:"Material: Resina \n\n\nTamaño: 12 cm, 10 cm \n\n\nDimensiones: 10 cm \nAdvertencia: Mantener alejado del fuego"}
 ]
 
 //creo la referencia al componente padre
 //creo un variable para almacenar la base
 
+
+
 let fila=document.getElementById('fila')
+let fila2=document.getElementById('fila2')
 
 //recorrer array js
 productos.forEach(function(producto){
-    console.log(producto.nombre)
+
     //paso para pintar en js
     //1 cree la estructura
     let columna=document.createElement("div")
     columna.classList.add("col")
     //creo la tarjeta
     let tarjeta=document.createElement("div")
-    tarjeta.classList.add("card")
-    tarjeta.classList.add("h-100")
+    tarjeta.classList.add("card" ,"border-info","h-100")
+
     //crear img
     let image=document.createElement("img")
     image.classList.add("card-img-top")
@@ -42,14 +93,68 @@ productos.forEach(function(producto){
     let title=document.createElement("h5")
     title.classList.add("card-title")
     title.textContent=producto.nombre
+
+    //crear descripcion
+    let description=document.createElement("p")
+    description.classList.add("card-text")
+    description.textContent=producto.descripcion
+
+    // precio
+    let precioProducto =document.createElement("p")
+    precioProducto.classList.add("stprecios")
+    precioProducto.textContent=producto.precio
+    //crear boton
+    let buttonMore=document.createElement("button")
+    buttonMore.classList.add("btn","btn-info")
+    buttonMore.innerText='Leer más'
+
     //2 ordenar estructura
     content1.appendChild(title)
+    content1.appendChild(description)
+    content1.appendChild(precioProducto)
+    content1.appendChild(buttonMore)
     tarjeta.appendChild(image)
     tarjeta.appendChild(content1)
     columna.appendChild(tarjeta)
     fila.appendChild(columna)
 
+
+    let buttonViewProduct= buttonMore
+      //evento leer mas(esto es un metodo)
+  buttonViewProduct.addEventListener('click', ()=>{
+
+    let modal1=document.getElementById("modal1")
+    modal1.style.display="flex"
+    let cerrar1=document.getElementById("cerrar")
+     cerrar1.addEventListener('click',()=>{
+     modal1.style.removeProperty('display')
+     })
+  let tituloproducto= document.getElementById("titulo-product")
+  tituloproducto.textContent=producto.nombre
+
+    let imgproducto=document.getElementById("imagproducto")
+    imgproducto.src =producto.photo;
+
+    let masInfo=document.getElementById("masifo")
+    masInfo.textContent=producto.secondescripcion
+
+
+
+
+
+
+  
+  })
+
 })
+
+
+
+
+  //buttonViewProduct.click();
+
+
+
 
 //empezar evento
 /*
@@ -62,4 +167,3 @@ function cambiarfoto(){
   let foto=document.getElementById("fotoprueba")
   foto.src="img/p-img4.jpg"
 }*/
-

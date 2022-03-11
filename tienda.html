@@ -1,49 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Studio Ghibli</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"  crossorigin="anonymous">
-  
-<!----------------- estilos css ----------------->
-<link rel="stylesheet" href="css/style.css">
-<!----------------------------------------------->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!----------------- estilos css ----------------->
+  <link rel="stylesheet" href="css/style.css">
+  <!----------------------------------------------->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <script> 
+  <script>
     $(function () {
-  var includes = $('[data-include]')
-  $.each(includes, function () {
-    var file = 'views/' + $(this).data('include') + '.html'
-    $(this).load(file)
-  })
-})
-
-      </script>
+      var includes = $('[data-include]')
+      $.each(includes, function () {
+        var file = 'views/' + $(this).data('include') + '.html'
+        $(this).load(file)
+      })
+    })
+  </script>
 </head>
+
 <body>
   <!-------------------------- menu ------------------------>
   <div data-include="menu"></div>
   <!------------------------- end menu --------------------->
-  <!-------------------------- Hero ------------------------>
+  <!-------------------------- contenido ------------------------>
   <main class="col-12 mt-5 pt-2">
-    <img src="img/store/bg-2.png" alt="" class="img-fluid w-100" id="bg totoro">
-  </main>
- <!------------------------- end Heder ---------------------->
-<!-------------------------contenido-------------------------->
-<main>
-  <div class="containter">
-    <div class="row row-cols-1 row-cols-md-5 g-3" id="fila"></div>
-  </div>
-</main>
 
-<!------------------------- fin contenido--------------------->
-  <!--------------- imagen tumba de las luciernagas ---------->
- 
-   <img src="img/store/bg-3.png" alt="tumba de las luciernagas sombrilla" class=" img-fluid w-100" id="toto">
-   <!---------- end imagen tumba de las luciernagas------------>
+    <img src="img/store/bg-2.png" alt="" class="img-fluid w-100" id="bg totoro">
+
+    <h1 class="text-center my-3">Productos</h1>
+
+    <div  class="container  pt-5" >
+      <div class="row modalcontent" id="modal1">
+        <div class="col">
+          <h5 id="titulo-product">Ventana Modal</h5>
+            <p id="masifo">
+              Lorem ipsum dolor
+            </p>
+            <p class="precio1">000</p>
+            <button type="button" class="btn btn-primary" id="cerrar">Cerrar</button>
+        </div>
+        <div class="col">
+          <img class="card-img-top" src="img/p-img2.jpg" id="imagproducto">
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-5 g-3" id="fila"></div>
+    </div>
+
+    <img src="img/store/bg-3.png" alt="tumba de las luciernagas sombrilla" class=" img-fluid w-100" id="toto">
+  </main>
+
+     <!------------------------- end contenido ---------------------->
+
+
   <!-- ----------------------- contacto ----------------------->
   <div data-include="contacto"></div>
   <!--------------------- end contacto ------------------------>
@@ -51,9 +71,12 @@
   <div data-include="footer1"></div>
   <!---------------------- end footer ------------------------->
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
 
   <script src="js/llenadoTienda.js"></script>
 
 </body>
+
 </html>
