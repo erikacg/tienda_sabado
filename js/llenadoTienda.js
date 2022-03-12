@@ -1,6 +1,6 @@
 //arreglo de objetos
-
-let productos=[
+export function pintartienda(){
+  let productos=[
     {nombre:"Pin Haku -Viaje de chihiro",precio:27000,
      photo:"img/p-img1.jpg",
      descripcion:"Pin kawaii",
@@ -102,7 +102,7 @@ productos.forEach(function(producto){
     // precio
     let precioProducto =document.createElement("p")
     precioProducto.classList.add("stprecios")
-    precioProducto.textContent=producto.precio
+    precioProducto.textContent="$"+producto.precio
     //crear boton
     let buttonMore=document.createElement("button")
     buttonMore.classList.add("btn","btn-info")
@@ -119,42 +119,18 @@ productos.forEach(function(producto){
     fila.appendChild(columna)
 
 
-    let buttonViewProduct= buttonMore
-      //evento leer mas(esto es un metodo)
-  buttonViewProduct.addEventListener('click', ()=>{
-
-    let modal1=document.getElementById("modal1")
-    modal1.style.display="flex"
-    let cerrar1=document.getElementById("cerrar")
-     cerrar1.addEventListener('click',()=>{
-     modal1.style.removeProperty('display')
-     })
-  let tituloproducto= document.getElementById("titulo-product")
-  tituloproducto.textContent=producto.nombre
-
-    let imgproducto=document.getElementById("imagproducto")
-    imgproducto.src =producto.photo;
-
-    let masInfo=document.getElementById("masifo")
-    masInfo.textContent=producto.secondescripcion
-
-
-
-
-
-
-  
-  })
+   
 
 })
 
 
 
 
+}
+
+
+
   //buttonViewProduct.click();
-
-
-
 
 //empezar evento
 /*

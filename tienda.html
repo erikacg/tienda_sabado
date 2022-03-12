@@ -36,33 +36,48 @@
 
     <h1 class="text-center my-3">Productos</h1>
 
-    <div  class="container  pt-5" >
-      <div class="row modalcontent" id="modal1">
-        <div class="col">
-          <h5 id="titulo-product">Ventana Modal</h5>
-            <p id="masifo">
-              Lorem ipsum dolor
-            </p>
-            <p class="precio1">000</p>
-            <button type="button" class="btn btn-primary" id="cerrar">Cerrar</button>
-        </div>
-        <div class="col">
-          <img class="card-img-top" src="img/p-img2.jpg" id="imagproducto">
-        </div>
-
-
-      </div>
-    </div>
-
     <div class="container">
       <div class="row row-cols-1 row-cols-md-5 g-3" id="fila"></div>
     </div>
+<section>
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modalinfo" tabindex="-1" >
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal" ></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <img src="" alt="" class="img-fluid w-100" id="photoinfo">
+            </div>
+            <div class="col-8">
+              <h3 class="text-center" id="nombreinfo"></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cerrar</button>
+        <button type="button" class="btn btn-primary">Añadir al carrito</button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
     <img src="img/store/bg-3.png" alt="tumba de las luciernagas sombrilla" class=" img-fluid w-100" id="toto">
   </main>
 
-     <!------------------------- end contenido ---------------------->
-
+ <!------------------------- end contenido ---------------------->
 
   <!-- ----------------------- contacto ----------------------->
   <div data-include="contacto"></div>
@@ -74,8 +89,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
   </script>
-
-  <script src="js/llenadoTienda.js"></script>
+<script src="js/popupindex.js"></script>
+  <script src="js/controlador.js" type="module"></script>
 
 </body>
 
