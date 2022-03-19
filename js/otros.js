@@ -37,11 +37,13 @@ let contenidoAutor=document.getElementById("contenidoautor")
 
 
 
+
 function cambiarinformacion(){
 
   info.textContent="Isao Takahata"
   imgautor.src ="img/store/isao.jpg"
-  contenidoAutor.textContent="Nacido en Japón, el 29 de octubre de 1935, fue director, productor y guionista de cintas de animación anime. Fue uno de los creadores más importantes del género. Cofundador, junto con su amigo Hayao Miyazaki de  \n los afamados Estudios Ghibli, su obra más afamada fue La tumba de las luciérnagas. <br> Takahata inició su carrera en los estudios de Toei Animation , donde dirigió su primera película, Horus, el príncipe del sol Taiyou no Ouji Horusu no Daibouken, 1968, en la que también participó Miyazaki."
+  contenidoAutor.textContent="Nacido en Japón, el 29 de octubre de 1935, fue director, productor y guionista de cintas de animación anime. Fue uno de los creadores más importantes del género.\r\n Cofundador, junto con su amigo Hayao Miyazaki de  .. los afamados Estudios Ghibli, su obra más afamada fue La tumba de las luciérnagas. <br> Takahata inició su carrera en los estudios de Toei Animation , donde dirigió su primera película, Horus, el príncipe del sol Taiyou no Ouji Horusu no Daibouken, 1968, en la que también participó Miyazaki."
+ 
 }
 
 let boton2=document.getElementById("botonB1")

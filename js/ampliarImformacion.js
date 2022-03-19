@@ -6,7 +6,7 @@ if(event.target.classList.contains("btn")){
 producto={
     photo:event.target.parentElement.parentElement.parentElement.querySelector("img").src,
     nombre:event.target.parentElement.parentElement.parentElement.querySelector("h5").textContent,
-   descripcion:event.target.parentElement.parentElement.parentElement.querySelector(".card-text").textContent,
+   descripcion:event.target.parentElement.parentElement.parentElement.querySelector("#segundaD").textContent,
    precioProducto:event.target.parentElement.querySelector(".stprecios").textContent
 }
 console.log(producto)
@@ -21,3 +21,5 @@ precioProducto.textContent=producto.precioProducto
 }
 
 }
+
+///pathname
