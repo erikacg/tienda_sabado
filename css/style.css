@@ -1,6 +1,6 @@
 
 .navbar{
-    min-height: 62px;
+
     margin-bottom: 0;
 }
 nav.navbar.navbar-dark.bg-dark.sticky-top.navbar-expand-lg {
@@ -41,21 +41,13 @@ p.texto-1 {
 
 
 
-  .row.modalcontent{
-      position: sticky;
-    background-color: #fff;
-    margin: 0 auto;
-    width: 800px;
-    max-width: 100%;
-    padding: 30px 50px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.56);
-    text-align: center;
-    display: none;
-  }
+  
 
   p.stprecios {
     font-weight: 700;
     font-size: 20px;
 }
 
+i.bi.bi-cart-plus.icono_cart {
+    font-size: 20px;
+}

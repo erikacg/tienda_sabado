@@ -9,7 +9,7 @@ producto={
    descripcion:event.target.parentElement.parentElement.parentElement.querySelector("#segundaD").textContent,
    precioProducto:event.target.parentElement.querySelector(".stprecios").textContent
 }
-console.log(producto)
+
 let photo=document.getElementById("photoinfo")
 photo.src=producto.photo
 let nombre=document.getElementById("nombreinfo")
@@ -18,6 +18,8 @@ let descripcion=document.getElementById("textoinfo")
 descripcion.textContent=producto.descripcion
 let precioProducto=document.getElementById("precioinfo")
 precioProducto.textContent=producto.precioProducto
+
+return producto
 }
 
 }
